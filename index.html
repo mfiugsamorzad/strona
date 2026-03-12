@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Główna | RSS MFI UG</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Główny, oficjalny niebieski UG */
+            --primary: #0041D2; 
+            /* Ciemniejszy odcień niebieskiego do efektów najechania myszką */
+            --primary-dark: #002b8a;
+            /* Bardzo jasny niebieski do wyróżnień */
+            --primary-light: #eef5fa;
+            /* Śnieżnobiałe tło */
+            --bg: #FFFFFF;
+            --text: #2c3e50;
+        }
+        body {
+            font-family: 'DM Sans', Arial, sans-serif;
+            margin: 0; 
+            line-height: 1.7; 
+            background: var(--bg); 
+            color: var(--text);
+        }
+        
+        /* --- GÓRNY PASEK NAWIGACYJNY --- */
+        nav {
+            position: sticky; top: 0; 
+            background: var(--primary); /* Klasyczny niebieski */
+            padding: 15px 20px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+            z-index: 1000;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+        
+        .logos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; 
+            gap: 20px;
+            margin-bottom: 15px;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+            padding-bottom: 15px;
+        }
+        
+        .nav-logo {
+            height: 45px; 
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none; 
+            color: #FFFFFF; 
+            font-weight: 700; 
+            font-size: 15px;
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            transition: color 0.3s, opacity 0.3s;
+        }
+        /* Po najechaniu link w menu lekko blaknie */
+        .nav-links a:hover { opacity: 0.7; } 
+        
+        /* --- GŁÓWNA TREŚĆ --- */
+        header {
+            text-align: center; padding: 60px 20px; background: #FFFFFF;
+            border-bottom: 5px solid var(--primary);
+        }
+        h1 { color: var(--primary); margin-bottom: 15px; font-size: 2.5em; font-weight: 700; }
+        .subtitle { font-size: 1.2em; color: #555; font-weight: 400; max-width: 600px; margin: 0 auto; }
+        
+        section { padding: 50px 20px; max-width: 800px; margin: 0 auto; }
+        h2 { 
+            color: var(--primary); border-left: 5px solid var(--primary); 
+            padding-left: 15px; margin-bottom: 25px; font-weight: 700;
+        }
+        
+        .info-card {
+            background: #FFFFFF; padding: 30px; border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px;
+            border: 1px solid #f0f0f0; 
+        }
+        .info-card p { margin-bottom: 15px; text-align: justify; }
+        
+        /* --- KONTAKT --- */
+        .contact-item {
+            display: flex; align-items: center; gap: 15px; margin-bottom: 15px;
+            font-size: 1.1em; font-weight: 500;
+        }
+        .contact-icon {
+            width: 30px; height: 30px; object-fit: contain;
+        }
+        .contact-link {
+            text-decoration: none; color: var(--text); transition: color 0.3s;
+        }
+        /* Po najechaniu tekst linku kontaktowego staje się granatowy */
+        .contact-link:hover { color: var(--primary); } 
+        
+        footer { 
+            text-align: center; padding: 30px; font-size: 0.85em; 
+            color: #FFFFFF; background: var(--primary); font-weight: 400;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--primary); color: #FFFFFF; padding: 12px 30px;
+            text-decoration: none; border-radius: 25px; font-weight: 700;
+            transition: transform 0.2s, background 0.3s;
+            margin-top: 10px;
+        }
+        /* Po najechaniu przycisk staje się ciemnoniebieski */
+        .cta-button:hover { background: var(--primary-dark); transform: translateY(-2px); } 
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logos-container">
+        <img src="UG_logo_RGB_podstawowy_negatyw_biały_PL.png" alt="Logo Uniwersytetu Gdańskiego" class="nav-logo">
+        <img src="Logo MFI.png" alt="Logo Wydziału MFI" class="nav-logo">
+        <img src="logo-rss-biale.PNG" alt="Logo RSS" class="nav-logo">
+        <img src="amfiteatr-logo-biale.png" alt="Logo aMFIteatr" class="nav-logo">
+    </div>
+    
+    <div class="nav-links">
+        <a href="index.html">Strona Główna</a>
+        <a href="aktualnosci.html">Aktualności</a>
+        <a href="poznaj-nas.html">Poznaj nas</a>
+        <a href="amfiteatr.html">aMFIteatr nauki</a>
+        <a href="mentoring.html">Mentoring</a>
+    </div>
+</nav>
+
+<header>
+    <h1>Witaj na stronie RSS MFI UG!</h1>
+    <p class="subtitle">Jesteśmy Radą Samorządu Studentów Wydziału Matematyki, Fizyki i Informatyki Uniwersytetu Gdańskiego. Działamy po to, aby wspierać, urozmaicać i ułatwiać Twoje studenckie życie.</p>
+</header>
+
+<section>
+    <h2>Co u nas znajdziesz?</h2>
+    <div class="info-card">
+        <p>Jako Samorząd reprezentujemy interesy wszystkich studentów naszego Wydziału przed Władzami Dziekańskimi i Rektorskimi. Ale nasza praca to nie tylko dokumenty i regulaminy!</p>
+        <p>Organizujemy wydarzenia kulturalne, szkolenia, wyjazdy integracyjne oraz tworzymy przestrzeń do rozwoju naukowego i osobistego. Zależy nam na tym, by MFI było miejscem, w którym nie tylko się studiuje, ale też świetnie spędza czas.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Nasze Inicjatywy i Aktualności</h2>
+    
+    <div class="info-card" style="border-left: 6px solid var(--primary);">
+        <h3 style="color: var(--primary); margin-top: 0;">📣 Bieżące Ogłoszenia i Aktualności</h3>
+        <p>Szukasz informacji o stypendiach, zapisach na szkolenia, imprezach wydziałowych albo zmianach w regulaminach? Zajrzyj na naszą tablicę ogłoszeń!</p>
+        <a href="aktualnosci.html" class="cta-button">Przejdź do Aktualności</a>
+    </div>
+
+    <div class="info-card">
+        <h3 style="color: var(--primary); margin-top: 0;">aMFIteatr nauki</h3>
+        <p>Cykl fascynujących wykładów popularnonaukowych, zrywający ze stereotypem nudnych akademickich monologów. Gościmy wybitnych popularyzatorów nauki, którzy potrafią porwać tłumy.</p>
+        <a href="amfiteatr.html" class="cta-button">Dowiedz się więcej</a>
+    </div>
+    
+    <div class="info-card">
+        <h3 style="color: var(--primary); margin-top: 0;">Mentoring przedsesyjny</h3>
+        <p>Wiemy, że sesja jest ciężka, dlatego stworzyliśmy program mentoringowy w ramach którego studenci wyższych lat pomagają młodszym koleżankom i kolegom, a prowadzący pomagają poprzez udostępnianie materiałów.</p>
+        <a href="mentoring.html" class="cta-button">Sprawdź szczegóły</a>
+    </div>
+</section>
+
+<section>
+    <h2>Skontaktuj się z nami</h2>
+    <div class="info-card">
+        <p>Masz pomysł na wydarzenie? Potrzebujesz pomocy ze sprawami studenckimi? A może po prostu chcesz do nas dołączyć? Pisz śmiało!</p>
+        <div class="contact-item" style="margin-top: 20px;">
+            <img src="instagram-logo.png" alt="Instagram" class="contact-icon">
+            <a href="https://instagram.com/mfiugsamorzad" target="_blank" class="contact-link">@mfiugsamorzad</a>
+        </div>
+        <div class="contact-item">
+            <span style="font-size: 26px; line-height: 1; width: 30px; text-align: center; display: inline-block;">✉️</span>
+            <a href="mailto:samorzad.mfi@studms.ug.edu.pl" class="contact-link">samorzad.mfi@studms.ug.edu.pl</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Rada Samorządu Studentów MFI UG<br>
+    <small>Projekt oparty na wytycznych Księgi Identyfikacji Wizualnej UG (Typografia: DM Sans)</small>
+</footer>
+
+</body>
+</html>

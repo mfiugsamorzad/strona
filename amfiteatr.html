@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aMFIteatr Nauki | RSS MFI UG</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0041D2; 
+            --primary-dark: #002b8a;
+            --primary-light: #eef5fa;
+            --bg: #FFFFFF;
+            --text: #2c3e50;
+        }
+        body {
+            font-family: 'DM Sans', Arial, sans-serif;
+            margin: 0; 
+            line-height: 1.7; 
+            background: var(--bg); 
+            color: var(--text);
+        }
+        
+        /* --- GÓRNY PASEK NAWIGACYJNY --- */
+        nav {
+            position: sticky; top: 0; 
+            background: var(--primary); 
+            padding: 15px 20px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+            z-index: 1000;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+        .logos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; 
+            gap: 20px;
+            margin-bottom: 15px;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+            padding-bottom: 15px;
+        }
+        .nav-logo { height: 45px; width: auto; object-fit: contain; }
+        .nav-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .nav-links a {
+            text-decoration: none; color: #FFFFFF; font-weight: 700; font-size: 15px;
+            text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s, opacity 0.3s;
+        }
+        .nav-links a:hover { opacity: 0.7; } 
+        
+        /* --- GŁÓWNA TREŚĆ --- */
+        header {
+            text-align: center; padding: 60px 20px; background: #FFFFFF;
+            border-bottom: 5px solid var(--primary);
+        }
+        h1 { color: var(--primary); margin-bottom: 15px; font-size: 2.5em; font-weight: 700; }
+        .subtitle { font-size: 1.2em; color: #555; font-weight: 400; max-width: 600px; margin: 0 auto; }
+        
+        section { padding: 50px 20px; max-width: 800px; margin: 0 auto; }
+        h2 { 
+            color: var(--primary); border-left: 5px solid var(--primary); 
+            padding-left: 15px; margin-bottom: 25px; font-weight: 700;
+        }
+        
+        /* Karty poszczególnych wykładów (Podzakładki) */
+        .lecture-card {
+            background: #FFFFFF; padding: 30px; border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px;
+            border: 1px solid #f0f0f0; border-left: 6px solid var(--primary);
+            position: relative; transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .lecture-card:hover {
+            transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .badge-past {
+            background: #e0e0e0; color: #555; padding: 5px 12px; border-radius: 20px;
+            font-size: 0.8em; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: inline-block;
+        }
+        .badge-upcoming {
+            background: var(--primary); color: #FFFFFF; padding: 5px 12px; border-radius: 20px;
+            font-size: 0.8em; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: inline-block;
+        }
+        
+        .lecture-title { font-size: 1.5em; color: var(--primary); margin: 10px 0 5px 0; font-weight: 700; }
+        .lecture-speaker { font-size: 1.1em; color: #333; font-weight: 500; margin-bottom: 15px; }
+        
+        footer { 
+            text-align: center; padding: 30px; font-size: 0.85em; 
+            color: #FFFFFF; background: var(--primary); font-weight: 400; line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block; background: var(--primary); color: #FFFFFF; padding: 10px 25px;
+            text-decoration: none; border-radius: 25px; font-weight: 700;
+            transition: background 0.3s; margin-top: 15px;
+        }
+        .cta-button:hover { background: var(--primary-dark); } 
+        
+        .cta-button-secondary {
+            display: inline-block; background: transparent; color: var(--primary); padding: 10px 25px;
+            text-decoration: none; border-radius: 25px; font-weight: 700; border: 2px solid var(--primary);
+            transition: background 0.3s, color 0.3s; margin-top: 15px;
+        }
+        .cta-button-secondary:hover { background: var(--primary); color: #FFFFFF; } 
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logos-container">
+        <img src="UG_logo_RGB_podstawowy_negatyw_biały_PL.png" alt="Logo Uniwersytetu Gdańskiego" class="nav-logo">
+        <img src="Logo MFI.png" alt="Logo Wydziału MFI" class="nav-logo">
+        <img src="logo-rss-biale.PNG" alt="Logo RSS" class="nav-logo">
+        <img src="amfiteatr-logo-biale.png" alt="Logo aMFIteatr" class="nav-logo">
+    </div>
+    
+    <div class="nav-links">
+        <a href="index.html">Strona Główna</a>
+        <a href="aktualnosci.html">Aktualności</a>
+        <a href="poznaj-nas.html">Poznaj nas</a>
+        <a href="amfiteatr.html">aMFIteatr nauki</a>
+        <a href="mentoring.html">Mentoring</a>
+    </div>
+</nav>
+
+<header>
+    <h1>aMFIteatr nauki</h1>
+    <p class="subtitle">Cykl fascynujących wykładów popularnonaukowych, w których zrywamy ze stereotypem nudnych, akademickich monologów.</p>
+</header>
+
+<section>
+    <h2>Nadchodzące wykłady</h2>
+    
+    <div class="lecture-card">
+        <span class="badge-upcoming">Edycja #2 - Wkrótce</span>
+        <h3 class="lecture-title">„Niepojęta” matematyczność świata</h3>
+        <div class="lecture-speaker">👤 dr Tomasz Miller</div>
+        <p>Czy wszechświat to tak naprawdę jedno wielkie równanie matematyczne? Dowiedz się, dlaczego równania bywają mądrzejsze od ich autorów i jak nowe zjawiska fizyczne odkrywa się „na papierze”.</p>
+        <a href="https://mfiugsamorzad.github.io/amfitearnauki-dr-tomasz-miller/" class="cta-button">Zobacz szczegóły</a>
+
+    </div>
+</section>
+
+<section>
+    <h2>Minione wykłady (Archiwum)</h2>
+    
+    <div class="lecture-card">
+        <span class="badge-past">Edycja #1 - Zakończona</span>
+        <h3 class="lecture-title">Czy maszyny mogą myśleć, czy tylko udają?</h3>
+        <div class="lecture-speaker">👤 prof. Andrzej Dragan</div>
+        <p>Inauguracja cyklu aMFIteatr nauki! Wykład połączony z promocją nowej książki profesora przyciągnął potężne tłumy – zapełniliśmy dwie aule i dodatkową salę z transmisją na żywo (łącznie ok. 450 osób!). Po spotkaniu odbyła się sesja Q&A oraz rozdawanie autografów.</p>
+        <a href="#galeria-w-przyszlosci" class="cta-button-secondary">Więcej informacji o wydarzeniu</a>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Rada Samorządu Studentów MFI UG<br>
+    ✉️ samorzad.mfi@studms.ug.edu.pl | IG: @mfiugsamorzad
+</footer>
+
+</body>
+</html>
